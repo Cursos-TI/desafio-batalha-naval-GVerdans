@@ -1,44 +1,53 @@
 #include <stdio.h>
 
 void imprimirTabuleiroDeDez(int matriz[10][10]){
-
+    
     printf("\n  "); // espaço para alinhas as LETRAS com os ZEROS.
-
+    
     for(char letra = 'A'; letra <= 'J'; letra++){ // Loop para printar as letras das colunas.
         printf("%2c", letra);
     }
-
+    
     printf("\n"); // Quebra de linha para que as letras fiquem em cima dos ZEROS.
-
-    for(int i = 0; i < 10; i++){ // loop para printar os numeros das linhas
-        printf("%2d ", i + 1);
-   
-        for(int j = 0; j < 10; j++){ // loop para printar a matriz, após o numero da linha. correndo linhas e colunas.
-          printf("%d ", matriz[i][j]);
-       }
-
+    
+    for(int i = 0; i < 10; i++){ // loop atribiu valores aos indices.
+        for(int j = 0; j < 10; j++){
+            matriz[i][j] = 0;
+            printf("%d %d ", matriz[i][j]);
+        }
         printf("\n");
     }
-
+    // printf("%2d ", i + 1);
+    // for(int i = 0; i < 10; i++){// { loop para printar os numeros das linhas
+    
+    // for(int j = 0; j < 10; j++){ // loop para printar a matriz, após o numero da linha. correndo linhas e colunas.
+    // printf("%d ", matriz[i][j]);
+    // }
+    
+    //     printf("\n");
+    // }
+    
 }
 
 int main() {
-
-    // NAVIO = 3
-
-    int tabuleiro[10][10] = {
-        {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 3, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 3, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 3, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
-        {0, 0, 0, 0, 0, 0, 3, 3, 3 ,0}
-    };
     
+    // NAVIO = 3
+    
+    // int tabuleiro[10][10] = {
+        //     {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 3, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 3, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 3, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 0, 0, 0, 0, 0 ,0},
+        //     {0, 0, 0, 0, 0, 0, 3, 3, 3 ,0}
+        // };
+        
+        int tabuleiro[10][10];
+        printf("\n");
+
 
 
    imprimirTabuleiroDeDez(tabuleiro); // Chama a função para imprimir o Tabuleiro
@@ -46,6 +55,7 @@ int main() {
     
 
    printf("\n");
+   
     return 0;
 }
 
