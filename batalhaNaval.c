@@ -19,6 +19,7 @@ void imprimirTabuleiroDeDez(int matriz[linhas][colunas]){
         for(int j = 0; j < colunas; j++){ // loop atribiu valores aos indices.
             matriz[i][j] = 0;
 
+            // Injeção dos Navios
             for(int k = 3; k < 6; k++){ // injeta o 'navio' na linha 5 da matriz.
                 matriz[4][k] = 3;
             }
@@ -31,12 +32,12 @@ void imprimirTabuleiroDeDez(int matriz[linhas][colunas]){
                 matriz[m][m] = 3;
             }
 
-            for(int n = 0; n < 3; n++){ // Injeta o navio na Horizontal, começa em [0,0].
-                matriz[n][n] = 3;
-            }
+            // for(int n = 0; n < 3; n++){ // Injeta o navio na Horizontal, começa em [0,0].
+            //     matriz[n][n] = 3;
+            // }
 
-            for(int o = 0 ; o < 3 ; o++){ // injeta o navio na diagonal [7,0]
-               matriz[8 - o][0 + o] = 5;
+            for(int n = 0 ; n < 3 ; n++){ // injeta o navio na diagonal [7,0]
+               matriz[8 - n][0 + n] = 3;
             }
             
             printf("%d ", matriz[i][j]);
