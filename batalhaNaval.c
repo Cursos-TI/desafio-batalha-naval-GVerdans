@@ -3,6 +3,7 @@
 #define linhas 10
 #define colunas 10
 
+// função para imprimir o tabuleiro
 void imprimirTabuleiroDeDez(int matriz[linhas][colunas]){
     
     printf("\n  "); // espaço para alinhas as LETRAS com os ZEROS.
@@ -16,7 +17,7 @@ void imprimirTabuleiroDeDez(int matriz[linhas][colunas]){
     for(int i = 0; i < linhas; i++){
         printf("%2d ", i + 1); // printa os numeros antes dos ZEROS.
 
-        for(int j = 0; j < colunas; j++){ // loop atribiu valores aos indices.
+        for(int j = 0; j < colunas; j++){ // loop atribui valores aos indices.
             matriz[i][j] = 0;
 
             // Injeção dos Navios
@@ -31,10 +32,6 @@ void imprimirTabuleiroDeDez(int matriz[linhas][colunas]){
             for(int m = 0; m < 3; m++){ // Injeta o navio na Horizontal, começa em [0,0].
                 matriz[m][m] = 3;
             }
-
-            // for(int n = 0; n < 3; n++){ // Injeta o navio na Horizontal, começa em [0,0].
-            //     matriz[n][n] = 3;
-            // }
 
             for(int n = 0 ; n < 3 ; n++){ // injeta o navio na diagonal [7,0]
                matriz[8 - n][0 + n] = 3;
@@ -64,21 +61,19 @@ int main() {
     return 0;
 }
 
+
+
 /*
 
-    SAIDA ESPERADA ! NOVATO
+      3
+    3 3 3    
+      3
 
-    A B C D E F G H I J
-  1 0 0 0 0 0 0 0 0 0 0
-  2 0 0 0 0 0 0 0 0 0 0
-  3 0 0 0 0 0 0 0 0 0 0 
-  4 0 0 0 0 0 0 0 0 0 0
-  5 0 0 0 0 0 0 0 0 0 0
-  6 0 0 0 0 0 0 0 0 0 0
-  7 0 0 0 0 0 0 0 0 0 0
-  8 0 0 0 0 0 0 0 0 0 0
-  9 0 0 0 0 0 0 0 0 0 0
- 10 0 0 0 0 0 0 0 0 0 0
+      3
+     3 3
+      3
 
-
+      3
+    3 3 3
+  3 3 3 3 3
 */
